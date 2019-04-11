@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class First extends Component {
-
-    render() {
-        //console.log(this.props);
-        //const { subject, dept, college } = this.props;
-
-        const { students } = this.props;
+const First = (props) => {
+ 
+        const { students } = props;
         const studentList = students.map(student => {
             return(
                 <div className="student" key = {student.id}>
@@ -22,8 +18,7 @@ class First extends Component {
                 {studentList}
             </div>
         )
-
-    }
+ 
 }
 
 export default First;
