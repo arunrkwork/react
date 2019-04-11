@@ -49,11 +49,11 @@ const First = ({students}) => {
                     students.map(student => {
                         return student.id > 1 ? (
                             <div className="student" key = {student.id}>
-                                    <div>Id : { student.id } </div>
-                                    <div>Subject : { student.subject } </div>
-                                    <div>Dept : { student.dept }</div>
-                                    <div>College : { student.college }</div>
-                                </div>
+                                <div>Id : { student.id } </div>
+                                <div>Subject : { student.subject } </div>
+                                <div>Dept : { student.dept }</div>
+                                <div>College : { student.college }</div>
+                            </div>
                         ) : (null)
                     }) 
                  }
