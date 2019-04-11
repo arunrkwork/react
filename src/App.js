@@ -14,13 +14,25 @@ class App extends Component {
     ]
   }
 
+  addSubject = (student) => {
+      //console.log(student);
+      student.id = Math.random();
+      //this.students.push(student);
+      let students = [...this.state.students, student];
+      
+      this.setState({
+        students: students
+      })
+      console.log(students);
+  }
+
   render() {
     return (
       <div className="App">
          <h1>Sample Page</h1>
          <First students = { this.state.students }/> 
          <br/>
-         <AddSubject/>
+         <AddSubject addSubject={this.addSubject}/>
       </div>
     );
   }

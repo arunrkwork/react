@@ -47,7 +47,7 @@ const First = ({students}) => {
              <div className="student-list">
                  {
                     students.map(student => {
-                        return student.id > 1 ? (
+                        return student.id > -1 ? (
                             <div className="student" key = {student.id}>
                                 <div>Id : { student.id } </div>
                                 <div>Subject : { student.subject } </div>

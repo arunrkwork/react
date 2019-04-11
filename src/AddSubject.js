@@ -16,7 +16,8 @@ class AddSubject extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        //console.log(this.state);
+        this.props.addSubject(this.state);
     }
 
     render() {
@@ -26,7 +27,7 @@ class AddSubject extends Component {
                     <input type="text" name="" id="subject" onChange={this.handleChange} placeholder="subject"/><br/><br/>
                     <input type="text" name="" id="dept" onChange={this.handleChange} placeholder="dept"/><br/><br/>
                     <input type="text" name="" id="college" onChange={this.handleChange} placeholder="college"/><br/><br/>
-                    <button type="submit">Submit</button>
+                    <button>Submit</button>
                 </form>
             </div>
         )
