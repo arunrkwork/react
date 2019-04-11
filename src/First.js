@@ -41,7 +41,7 @@ const First = ({students}) => {
         //     </div>
         // )
 
-        // assing directly to the output
+        // assing directly to the output jsx
   
          return( 
              <div className="student-list">
