@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
          <h1>Sample Page</h1>
-         <First/>
+         <First subject='python' dept="mca" college="ksrcas" />
       </div>
     );
   }
