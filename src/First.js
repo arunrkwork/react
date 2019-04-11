@@ -1,8 +1,7 @@
 import React from 'react';
 
-const First = (props) => {
- 
-        const { students } = props;
+const First = ({students}) => {
+  
         const studentList = students.map(student => {
             return(
                 <div className="student" key = {student.id}>
