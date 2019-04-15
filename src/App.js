@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import First from './First';
 import AddSubject from './AddSubject';
+import './app.css'
 
 class App extends Component {
 
