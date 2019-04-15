@@ -26,11 +26,23 @@ class App extends Component {
       console.log(result);
   } 
 
+  deleteSubject = (id) => {
+    console.log(id)
+    let data =  this.state.students.filter(students => {
+      return students.id !== id
+    });
+
+    this.setState({
+      students: data
+    })
+
+  }
+
   render() {
     return (
       <div className="App">
          <h1>Sample Page</h1>
-         <First students = { this.state.students }/> 
+         <First deleteSubject = {this.deleteSubject} students = { this.state.students }/> 
          <br/>
          <AddSubject addSubject={this.addSubject}/>
       </div>
