@@ -39,6 +39,15 @@ class App extends Component {
 
   }
 
+  componentDidMount() {
+    console.log('components did mount')
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('component did update')
+    console.log(prevProps, prevState)
+  }
+
   render() {
     return (
       <div className="App">
