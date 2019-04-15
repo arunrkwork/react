@@ -14,17 +14,17 @@ class App extends Component {
     ]
   }
 
-  addSubject = (student) => {
+  addSubject = (data) => {
       //console.log(student);
-      student.id = Math.random();
+      data.id = Math.random();
       //this.students.push(student);
-      let students = [...this.state.students, student];
+      let result = [...this.state.students, data];
       
       this.setState({
-        students: students
+        students: result
       })
-      console.log(students);
-  }
+      console.log(result);
+  } 
 
   render() {
     return (
