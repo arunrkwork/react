@@ -1,66 +1,50 @@
-import React, { Component } from 'react';
-import First from './First';
-import AddSubject from './AddSubject';
-import './app.css'
+import React, { Component } from 'react'; 
+import Todos from './Todos'
+import AddTodo from './AddTodo'
 
 class App extends Component {
 
   state = {
-    students : [
-        { id: 1, subject: 'Java', dept: 'MCA' , college: 'KSRCAS'} ,
-        { id: 2, subject: 'Python', dept: 'MSC' , college: 'KSRCAS'} ,
-        { id: 3, subject: 'Sql', dept: 'MSC IT' , college: 'KSRCAS'} ,
-        { id: 4, subject: 'Android', dept: 'MSC CS' , college: 'KSRCAS'} ,
-        { id: 5, subject: 'BlockChain', dept: 'MCA' , college: 'KSRCAS'} 
+    todos: [
+      {id: 1, content: 'pos work'} , 
+      {id: 2, content: 'carrots work'} ,
+      {id: 3, content: 'enrollme work'}
     ]
   }
 
-  addSubject = (data) => {
-      //console.log(student);
-      data.id = Math.random();
-      //this.students.push(student);
-      let result = [...this.state.students, data];
-      
-      this.setState({
-        students: result
-      })
-      console.log(result);
-  } 
-
-  deleteSubject = (id) => {
+  deleteTodo = (id) => {
     console.log(id)
-    let data =  this.state.students.filter(students => {
-      return students.id !== id
+
+    const todos = this.state.todos.filter(todo => {
+      return todo.id !== id
     });
 
     this.setState({
-      students: data
+      todos
     })
 
   }
 
-  componentDidMount() {
-    console.log('components did mount')
-  }
+  addTodo = (todo) => {
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log('component did update')
-    console.log(prevProps, prevState)
+    todo.id = Math.random(); 
+    let todos = [...this.state.todos, todo];
+
+    this.setState({
+      todos  
+    })
+
   }
 
   render() {
     return (
-      <div className="App">
-         <h1>Sample Page</h1>
-         <First deleteSubject = {this.deleteSubject} students = { this.state.students }/> 
-         <br/>
-         <AddSubject addSubject={this.addSubject}/>
+      <div className="todo-app container">
+        <h1 className="center blue-text">Todo's</h1>
+        <Todos todos={this.state.todos}  deleteTodo={this.deleteTodo }/>
+        <AddTodo addTodo = {this.addTodo} />
       </div>
     );
   }
 }
 
 export default App;
-
-
-
