@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = (props) => {
     
-    console.log(props.location.pathname)
+  //  console.log(props.location.pathname)
 
     // setTimeout(() => {
     //     props.history.push('/home')
