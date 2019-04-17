@@ -10,7 +10,7 @@ const Navbar = (props) => {
     return(
         <nav className="nav-wrapper green">
             <div className="container">
-                <a href="" className="brandplogo">MyShop</a>
+                <Link to='' className="brandplogo">MyShop</Link>
                 <ul className="right">
                     <li><Link to="/">Home</Link></li>
                     <li><NavLink to="/about">About</NavLink></li>
